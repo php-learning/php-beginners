@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ajouter une bille</title>
+  </head>
+  <body>
+
+    <form id="form" action="#">
+
+     <div class="container">
+       <label><b>nom</b></label>
+       <input type="text" placeholder="Ajouter un nom" id="name" name="name" required>
+
+       <label><b>taille</b></label>
+       <input type="number" placeholder="Ajouter une taille" id="taille" name="taille" required>
+
+       <button type="submit" >Ajouter</button>
+     </div>
+
+     <p id="successMessage">
+
+     </p>
+
+     <p id="errorMessage">
+
+     </p>
+
+   </form>
+
+   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+<script>
+
+
+$(document).ready(function(){
+
+    $("#form").submit(function(event){
+          event.preventDefault();
+          console.log("clicked2");
+        $.post(
+            'ajouterunebille.php',
+            {
+                name : $("#name").val(),
+                taille : $("#taille").val()
+            },
+
+            function(response){
+              if(response) {
+                console.log(response);
+                $("#successMessage").html("Connecté !")
+              } else {
+                $("#errorMessage").html("Error de Connexion !")
+              }
+
+            }
+
+         );
+
+    });
+
+});
+
+
+</script>
+
+  </body>
+</html>
