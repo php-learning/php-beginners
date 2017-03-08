@@ -103,5 +103,5 @@ $Billes =  [
 
 // EXOS 6 : CREER UN FORMULAIRE POUR AJOUTER DES BILLES DANS LA BASE 
  
- utiliser ajouterbille.html
+ //utiliser ajouterbille.html
 
