@@ -54,7 +54,7 @@ $bocal = [
 
 // EXOS 3 :INSERER LES BILLES DANS LA BASE
 
-
+// CREATE TABLE `php_dc`.`taillebilles` ( `id` INT NOT NULL AUTO_INCREMENT , `tailledelabille` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 
 
